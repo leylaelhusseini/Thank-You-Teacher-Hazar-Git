@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fff3e6;
+  color: #4a2a1c;
+  text-align: center;
+  padding: 30px 16px;
+}
+
+#crepe {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 20px;
+  background: #f2b35e;
+  border: 8px solid #d98f3a;
+  border-radius: 50%;
+  position: relative;
+}
+
+.eyes span {
+  position: absolute;
+  top: 60px;
+  width: 16px;
+  height: 22px;
+  background: #4a2a1c;
+  border-radius: 50%;
+}
+.eyes span:first-child { left: 45px; }
+.eyes span:last-child { right: 45px; }
+
+.mouth {
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  width: 40px;
+  height: 20px;
+  border-bottom: 5px solid #4a2a1c;
+  border-radius: 0 0 40px 40px;
+}
+
+.sad .mouth {
+  bottom: 38px;
+  border-bottom: none;
+  border-top: 5px solid #4a2a1c;
+  border-radius: 40px 40px 0 0;
+}
+.nervous .mouth {
+  height: 0;
+  border-radius: 0;
+}
+
+.hop { animation: hop 0.3s; }
+@keyframes hop {
+  50% { transform: translateY(-20px); }
+}
+
+#text {
+  font-size: 22px;
+  max-width: 480px;
+  margin: 0 auto 20px;
+  min-height: 100px;
+}
+
+button, #reply {
+  font-size: 18px;
+  background: #c8323a;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 22px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#box {
+  font-size: 80px;
+  cursor: pointer;
+  display: inline-block;
+}
+#box.shake { animation: shake 0.3s; }
+@keyframes shake {
+  25% { transform: rotate(-12deg); }
+  75% { transform: rotate(12deg); }
+}
+
+#prize {
+  background: white;
+  border: 3px dashed #c8323a;
+  border-radius: 16px;
+  max-width: 360px;
+  margin: 0 auto 20px;
+  padding: 10px 20px;
+}
+
+.fall {
+  position: fixed;
+  top: -30px;
+  font-size: 26px;
+  animation: fall 2.5s linear forwards;
+}
+@keyframes fall {
+  to { transform: translateY(110vh); }
+}
